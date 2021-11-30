@@ -17,9 +17,11 @@ const Navigation = () => {
                 {/* <!-- primary nav --> */}
                 <div className="hidden md:flex items-center space-x-1">
                   <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">Home</Link>
-                  {/* <Link to="/about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">About</Link> */}
                   <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                     About Me
+                  </a>
+                  <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                    Contact
                   </a>
                 </div>
               </div>
@@ -37,9 +39,12 @@ const Navigation = () => {
           {/* <!-- mobile menu --> */}
           <div id="mobile-menu" className="mobile-menu hidden flex flex-col md:hidden items-center">
                     <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">Home</Link>
-                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                    <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                         About Me
-                      </a>
+                    </a>
+                    <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                        Contact
+                    </a>
             </div>
         </nav>
         </>

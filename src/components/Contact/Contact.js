@@ -18,7 +18,7 @@ const Contact = () => {
         e.target.reset();
     }
     return (
-        <div className="bg-gray-100">
+        <div id="contact" className="bg-gray-100">
           <div className="w-11/12 md:w-9/12 mx-auto py-8">
           <h1 className="mb-14 md:m-0 text-2xl md:text-3xl md:text-right pt-3 md:p-5 text-center font-bold text-gray-800">Contact</h1>
             <div className="bg-white rounded-3xl py-8">
