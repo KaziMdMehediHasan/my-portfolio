@@ -22,7 +22,7 @@ const Skills = () => {
         <div className="bg-gray-100">
           <div className="w-11/12 md:w-9/12 mx-auto py-8">
             <h1 className="text-2xl mb-14 md:m-0 md:text-3xl md:text-right md:p-5 text-center font-bold text-gray-800">Skills</h1>
-            <div className="bg-white rounded-3xl transform md:hover:scale-105 duration-500 p-5 grid grid-cols-2 md:grid-cols-4 gap-y-5">
+            <div className="bg-white rounded-3xl transform md:hover:scale-105 duration-500 p-5 grid grid-cols-2 md:grid-cols-4 gap-y-5 overflow-hidden">
                 <div data-aos="fade-right" className="flex justify center items-center flex-col transform md:hover:scale-105 duration-500">
                     <p className="text-5xl text-yellow-300">{javascript}</p>
                     <p className="text-gray-500 font-bold">Javascript</p>

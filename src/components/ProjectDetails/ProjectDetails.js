@@ -2,6 +2,8 @@ import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ProjectDetails = () => {
     const [projects, setProjects] = useState([]);
@@ -19,6 +21,12 @@ const ProjectDetails = () => {
 
     console.log(selectedProject);
     const copyright = <FontAwesomeIcon icon={faCopyright}/>
+
+    // animation 
+
+    useEffect(()=>{
+        Aos.init({duration: 1000});
+    },[])
     return (
         <div className="bg-gray-100">
             <div className="w-11/12 md:w-9/12 mx-auto py-8 md:py-12">
@@ -26,13 +34,13 @@ const ProjectDetails = () => {
                 <h1 className="text-center text-4xl md:text-5xl font-bold text-gray-600 pb-8 md:pb-12">Contingents</h1>
                 <div className="grid justify-items-center lg:grid-cols-3 md:grid-cols-2 gap-y-6 md:gap-x-4 lg:gap-y-0 lg:gap-x-0">
 
-                    <div className="">
+                    <div data-aos="fade-right" className="">
                         <img className="w-96 border-2 rounded-xl border-green-300 transform md:hover:scale-125 shadow-xl duration-500" src={selectedProject?.img_1} alt=""/>
                     </div>
-                    <div className="">
+                    <div data-aos="fade-down" className="">
                         <img className="w-96 border-2 rounded-xl border-green-300 transform md:hover:scale-125 shadow-xl duration-500" src={selectedProject?.img_2} alt=""/>
                     </div>
-                    <div className="">
+                    <div data-aos="fade-left" className="">
                         <img className="w-96 border-2 rounded-xl border-green-300 transform md:hover:scale-125 shadow-xl duration-500" src={selectedProject?.img_3} alt=""/>
                     </div>
                 </div>
