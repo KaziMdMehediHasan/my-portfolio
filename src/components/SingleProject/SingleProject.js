@@ -8,7 +8,7 @@ const SingleProject = (props) => {
     const {name, img, live, client, server, technologies, features,id} = props.project;
 
         useEffect(()=>{
-            Aos.init({duration: 300});
+            Aos.init({duration: 1000});
         },[])
     return (
         <>
