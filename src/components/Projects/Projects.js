@@ -3,7 +3,6 @@ import SingleProject from '../SingleProject/SingleProject';
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
-
     useEffect(() => {
         fetch("/fakeData.json")
         .then(res=>res.json())

@@ -1,7 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -17,11 +20,16 @@ const Contact = () => {
         });
         e.target.reset();
     }
+
+    useEffect(()=>{
+      Aos.init({duration: 500});
+  },[])
+
     return (
         <div id="contact" className="bg-gray-100">
           <div className="w-11/12 md:w-9/12 mx-auto py-8">
           <h1 className="mb-14 md:m-0 text-2xl md:text-3xl md:text-right pt-3 md:p-5 text-center font-bold text-gray-800">Contact</h1>
-            <div className="bg-white rounded-3xl py-8">
+            <div data-aos="fade-up" className="bg-white rounded-3xl py-8">
             <form className="" ref={form} onSubmit={sendEmail}>
               <div className="flex flex-col justify-center items-center">
                   {/* <label className="my-3 font-bold text-gray-500">Subject</label>
