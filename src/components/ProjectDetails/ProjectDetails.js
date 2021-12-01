@@ -32,7 +32,8 @@ const ProjectDetails = () => {
             <div className="w-11/12 md:w-9/12 mx-auto py-8 md:py-12">
                 {/* image div */}
                 <h1 className="text-center text-4xl md:text-5xl font-bold text-gray-600 pb-8 md:pb-12">Contingents</h1>
-                <div className="grid justify-items-center lg:grid-cols-3 md:grid-cols-2 gap-y-6 md:gap-x-4 lg:gap-y-0 lg:gap-x-0">
+                {
+                    selectedProject ?                 <div className="grid justify-items-center lg:grid-cols-3 md:grid-cols-2 gap-y-6 md:gap-x-4 lg:gap-y-0 lg:gap-x-0">
 
                     <div data-aos="fade-right" className="">
                         <img className="w-96 border-2 rounded-xl border-green-300 transform md:hover:scale-125 shadow-xl duration-500" src={selectedProject?.img_1} alt=""/>
@@ -43,7 +44,12 @@ const ProjectDetails = () => {
                     <div data-aos="fade-left" className="">
                         <img className="w-96 border-2 rounded-xl border-green-300 transform md:hover:scale-125 shadow-xl duration-500" src={selectedProject?.img_3} alt=""/>
                     </div>
+                </div> : 
+                <div class=" flex justify-center items-center">
+                <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
                 </div>
+                }
+
                 {/* info div */}
                 <div className="bg-white mt-20 py-8 rounded-3xl">
                 <h1 className="text-2xl text-center md:text-3xl font-bold text-gray-600">{selectedProject?.name}</h1>

@@ -9,6 +9,8 @@ const Navigation = () => {
         const ham = document.getElementById("mobile-menu");
         ham.classList.toggle("hidden");
     }
+
+
     return (
         <>
         <nav className="bg-gray-100 shadow-lg p-4">
@@ -24,6 +26,9 @@ const Navigation = () => {
                   <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                     Contact
                   </a>
+                  <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                    Blogs
+                  </Link>
                 </div>
               </div>
               {/* <!-- mobile button goes here --> */}
@@ -46,6 +51,9 @@ const Navigation = () => {
                     <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                         Contact
                     </a>
+                    <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                        Contact
+                    </Link>
             </div>
         </nav>
         </>

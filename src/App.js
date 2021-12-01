@@ -5,6 +5,7 @@ import Navigation from './components/Navigation/Navigation';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ProjectDetails from './components/ProjectDetails/ProjectDetails';
 import AboutMe from './components/AboutMe/AboutMe';
+import Blogs from './components/Blogs/Blogs';
 
 function App() {
   return (
@@ -17,9 +18,12 @@ function App() {
         <Route path="/home">
            <Home></Home>
         </Route>
-        {/* <Route path="/about">
+        <Route path="/about">
            <AboutMe></AboutMe>
-        </Route> */}
+        </Route>
+        <Route path="/blogs">
+           <Blogs></Blogs>
+        </Route>
         <Route path="/projects/:id">
            <ProjectDetails></ProjectDetails>
         </Route>
