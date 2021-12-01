@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 
 
 const Navigation = () => {
@@ -9,8 +9,8 @@ const Navigation = () => {
         const ham = document.getElementById("mobile-menu");
         ham.classList.toggle("hidden");
     }
-
-
+    const location = useLocation();
+    console.log('came from' ,location.pathname);
     return (
         <>
         <nav className="bg-gray-100 shadow-lg p-4">
@@ -20,12 +20,18 @@ const Navigation = () => {
                 {/* <!-- primary nav --> */}
                 <div className="hidden md:flex items-center space-x-1">
                   <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">Home</Link>
+                  {
+                    location.pathname !== "/home" ? "" : 
+                  <div>
                   <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                     About Me
                   </a>
                   <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                     Contact
                   </a>
+                  </div>
+                  }
+
                   <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
                     Blogs
                   </Link>
@@ -45,14 +51,19 @@ const Navigation = () => {
           {/* <!-- mobile menu --> */}
           <div id="mobile-menu" className="mobile-menu hidden flex flex-col md:hidden items-center">
                     <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">Home</Link>
-                    <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
-                        About Me
-                    </a>
-                    <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
-                        Contact
-                    </a>
+                    {
+                    location.pathname !== "/home" ? "" : 
+                        <div className="flex flex-col items-center justify-center">
+                            <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                              About Me
+                            </a>
+                            <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                              Contact
+                            </a>
+                        </div>
+                    }
                     <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
-                        Contact
+                        Blogs
                     </Link>
             </div>
         </nav>

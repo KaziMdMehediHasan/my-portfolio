@@ -7,8 +7,11 @@ import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import Social from '../Social/Social';
 import TopSection from '../TopSection/TopSection';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
+    const location = useLocation();
+    console.log('came from' ,location.pathname);
     return (
         <>
         <TopSection></TopSection>

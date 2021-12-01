@@ -32,8 +32,6 @@ const Contact = () => {
             <div data-aos="fade-up" className="bg-white rounded-3xl py-8">
             <form className="" ref={form} onSubmit={sendEmail}>
               <div className="flex flex-col justify-center items-center">
-                  {/* <label className="my-3 font-bold text-gray-500">Subject</label>
-                  <input class="w-9/12 py-3 px-3 border-2 rounded-3xl focus:outline-none focus:ring-2 focus:ring-green-500" type="text" placeholder="Subject" name="subject" /> */}
 
                   <label className="my-3 font-bold text-gray-500">Name</label>
                   <input class="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" type="text" placeholder="your name" name="name" />
