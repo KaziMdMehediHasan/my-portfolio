@@ -13,8 +13,8 @@ const TopSection = () => {
         <div className="bg-gray-100">
             <div className=" py-10 md:py-20 mx-auto w-9/12 flex flex-col justify-center items-center md:flex-row">
             {/* image div */}
-                <div data-aos="fade-in" className="">
-                    <img className="shadow-xl ring-8 ring-green-300 rounded-full md:w-9/12 transform hover:scale-105 duration-500" src={dp} alt=""/>
+                <div  data-aos="fade-in" className="">
+                    <img className="shadow-xl ring-8 ring-green-300 rounded-full md:w-9/12 transform hover:scale-105 duration-500 animate-wiggle" src={dp} alt=""/>
                 </div>
             {/* description div */}
             <div className="">

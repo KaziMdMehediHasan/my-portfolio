@@ -19,15 +19,15 @@ const Navigation = () => {
               <div className="flex space-x-4">        
                 {/* <!-- primary nav --> */}
                 <div className="hidden md:flex items-center space-x-1">
-                  <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">Home</Link>
+                  <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">Home</Link>
                   
                    { 
                       location.pathname !== "/" ? "" :
                       <div>
-                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         About Me
                       </a>
-                      <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                      <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         Contact
                       </a>
                       </div>
@@ -35,10 +35,10 @@ const Navigation = () => {
                    { 
                       location.pathname !== "/home" ? "" :
                       <div>
-                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         About Me
                       </a>
-                      <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                      <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         Contact
                       </a>
                       </div>
@@ -46,7 +46,7 @@ const Navigation = () => {
 
                   
 
-                  <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                  <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                     Blogs
                   </Link>
                 </div>
@@ -64,14 +64,14 @@ const Navigation = () => {
           </div>
           {/* <!-- mobile menu --> */}
           <div id="mobile-menu" className="mobile-menu hidden flex flex-col md:hidden items-center">
-                    <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">Home</Link>
+                    <Link to="/home" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">Home</Link>
                     {
                     location.pathname !== "/home" ? "" : 
                         <div className="flex flex-col items-center justify-center">
-                            <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                            <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                               About Me
                             </a>
-                            <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                            <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                               Contact
                             </a>
                         </div>
@@ -79,15 +79,15 @@ const Navigation = () => {
                     { 
                       location.pathname !== "/" ? "" :
                       <div className="flex flex-col items-center justify-center">
-                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                      <a href="#about" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         About Me
                       </a>
-                      <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                      <a href="#contact" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         Contact
                       </a>
                       </div>
                   }
-                    <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-gray-900">
+                    <Link to="/blogs" className="py-5 px-3 text-gray-700 font-bold hover:text-green-300">
                         Blogs
                     </Link>
             </div>
