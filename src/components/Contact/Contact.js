@@ -15,6 +15,9 @@ const Contact = () => {
       emailjs.sendForm('service_c4k3vl3', 'template_2nxt21o', form.current, 'user_v0thehuKnj5uuToF980dp')
         .then((result) => {
             console.log(result.text);
+            if(result.text == "OK"){
+              alert("Message Sent Successfully!")
+            }
         }, (error) => {
             console.log(error.text);
         });
@@ -34,13 +37,13 @@ const Contact = () => {
               <div className="flex flex-col justify-center items-center">
 
                   <label className="my-3 font-bold text-gray-500">Name</label>
-                  <input class="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" type="text" placeholder="your name" name="name" />
+                  <input className="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" type="text" placeholder="your name" name="name" />
 
                   <label className="my-3 font-bold text-gray-500">Email</label>
-                  <input class="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" type="email" placeholder="your email" name="email" />
+                  <input className="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" type="email" placeholder="your email" name="email" />
                   
                   <label className="my-3 font-bold text-gray-500">Message</label>
-                  <textarea class="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="your message to me" name="message" />
+                  <textarea className="w-9/12 py-3 px-3 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="your message to me" name="message" />
 
                 <input className="btn-green mt-3" type="submit" value="Send" />
               </div>
